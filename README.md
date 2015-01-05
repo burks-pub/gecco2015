@@ -21,7 +21,7 @@ JUnit 4.4
 Matplotlib
 
 
-BUILDING:
+BUILDING THE CODE:
 
 The easiest way to build this project into an executable jar file is to use Apache Maven:
 1. Download and install Apache Maven (http://maven.apache.org/)
