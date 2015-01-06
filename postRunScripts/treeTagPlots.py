@@ -156,16 +156,15 @@ def plotDensityLines(inputDir, outputDir):
 #------------------ MAIN ---------------------------
 if __name__ == "__main__":
 	if len(sys.argv) != 4:
-		print "Usage treeTagPlots.py <INPUT_DIR_LIST (no spaces unless quoted!)> <LEGEND_LOC [0,10]> <OUTPUT_DIR>"
-		print "Example: treeTagPlots.py dir1,dir2,dir3 1 outputDir"
+		print "Usage treeTagPlots.py <INPUT_DIR> <LEGEND_LOC [0,10]> <OUTPUT_DIR>"
+		print "Example: treeTagPlots.py inputDir 1 outputDir"
 		quit()
 		
 	#Grab the command line arguments
-	inputDirs = sys.argv[1].split(",")
+	inputDir = sys.argv[1]
 	LEGEND_LOC = int(sys.argv[2])
 	outputDir= sys.argv[3]
 
 	#Plot the total tags stats
-	for inputDir in inputDirs:
-		plotDensityLines(inputDir, outputDir)
+	plotDensityLines(inputDir, outputDir)
 
