@@ -12,13 +12,15 @@ Java 1.6 or above
 
 Apache Maven - for building the project (and automatically gathering required dependencies)
 
+Matplotlib - for plotting results
+
 Apache Commons Lang 3
 
 Apache Log4j 1.2.17
 
 JUnit 4.4
 
-Matplotlib
+
 
 
 BUILDING THE CODE:
@@ -40,4 +42,20 @@ NOTE: The configuration files were all taken directly from our experiments, whic
 
 GENERATING PLOTS:
 
+We have also included all the scripts necessary for recreating the plots from the paper. These scripts are intended to run on a directory containing data files from multiple runs of the code. The scripts are located in the postRunScripts directory:
 
+1. compareFitness.py - Plots mean best fitness over time.
+
+    Example usage: python compareFitness.py directory1,directory2,directory3 label1,label2,label3 outputDirectory
+
+2. convergence.py - Plots bar charts of the mean number of fitness evaluations required to find a solution, for the runs in which a solution was found. Also creates (1) a file containing pairwise Mann-Whitney U test p-values for every input directory supplied, and (2) a file containing the mean number of fitness evaluations required.
+
+    Example usage: python convergence.py directory1,directory2,directory3 label1,label2,label3 outputDirectory
+
+3. successRates.py - Creates (1) a text file containing the success rates (percentage of runs in which a solution was found) for each input directory supplied, and (2) a file containing pairwise Fisher's Exact test p-values for every input directory supplied.
+
+    Example usage: python successRates.py directory1,directory2,directory3 label1,label2,label3 outputDirectory
+
+4. treeTagPlots.py - Plots the mean density of the most dense genetic marker over time (in generations), as described in our paper. Note: The <LEGEND_CODE> corresponds to the Matplotlib legend location integer code, which is used to position the legend. We used 1 (upper right) for results from our approach and 4 (lower right) for results from standard GP.
+
+    Example usage: python treeTagPlots.py inputDirectory <LEGEND_CODE> outputDirectory
