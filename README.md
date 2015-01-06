@@ -56,6 +56,6 @@ We have also included all the scripts necessary for recreating the plots from th
 
     Example usage: python successRates.py directory1,directory2,directory3 label1,label2,label3 outputDirectory
 
-4. treeTagPlots.py - Plots the mean density of the most dense genetic marker over time (in generations), as described in our paper. Note: The <LEGEND_CODE> corresponds to the Matplotlib legend location integer code, which is used to position the legend. We used 1 (upper right) for results from our approach and 4 (lower right) for results from standard GP.
+4. treeTagPlots.py - Plots the mean density of the most dense genetic marker over time (in generations), as described in our paper. Note: The LEGEND_CODE corresponds to the Matplotlib legend location integer code, which is used to position the legend. We used 1 (upper right) for results from our approach and 4 (lower right) for results from standard GP.
 
-    Example usage: python treeTagPlots.py inputDirectory <LEGEND_CODE> outputDirectory
+    Example usage: python treeTagPlots.py inputDirectory LEGEND_CODE outputDirectory
