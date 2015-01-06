@@ -37,7 +37,7 @@ After you have built the executable jar file as described above, simply execute 
 
 java -jar target/gp-research-0.1.jar conf/CONFIG_FILE.properties
 
-This will use the config file located in conf/CONFIG_FILE.properties, and the resulting output will be saved to the directory "output" by default (Specify a path, which can be new if you have the appropriate permissions, at the end of the command to use a different output directory. This is useful when automating execution to perform several independent trials).
+This will use the config file located at conf/CONFIG_FILE.properties, and the resulting output will be saved to the directory "output" by default (Specify a path, which can be new if you have the appropriate permissions, at the end of the command to use a different output directory. This is useful when automating execution to perform several independent trials).
 
 NOTE: The configuration files were all taken directly from our experiments, which were run in a high-performance computing environment. You may need to adjust the number of threads (numThreads option in the configuration files) for your system.
 
