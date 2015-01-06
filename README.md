@@ -26,7 +26,9 @@ JUnit 4.4
 BUILDING THE CODE:
 
 The easiest way to build this project into an executable jar file is to use Apache Maven:
+
 1. Download and install Apache Maven (http://maven.apache.org/)
+
 2. Navigate to the top-level directory of this project and build with Maven: Execute "mvn package" (Assuming that you have Maven installed correctly and have the correct permissions, this will download all required dependencies and place them into the executable jar file).
 
 RUNNING THE CODE:
