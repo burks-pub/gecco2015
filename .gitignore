@@ -2,3 +2,6 @@ testOutput
 target
 dependency-reduced-pom.xml
 build
+.classpath
+.project
+.settings
