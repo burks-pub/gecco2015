@@ -20,8 +20,6 @@ import ec.research.gp.simple.util.Context;
 import ec.research.gp.statistics.SimpleGPStatistics;
 import ec.research.gp.statistics.Statistics;
 
-
-
 /**
  * This is the basic implementation of tree-based GP using ramped half & half
  * tree generation. Other GP implementations should extend this.
@@ -701,7 +699,10 @@ public class GP {
 					problem.fitness(individual);
 
 					synchronized (lock) {
-						numEvaluations++;
+						if (!(foundOptimal && context.getConfig()
+								.stopOnOptimal())) {
+							numEvaluations++;
+						}
 
 						// See if the best individual of the generation is the
 						// best overall

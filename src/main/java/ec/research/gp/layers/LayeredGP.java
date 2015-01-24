@@ -18,8 +18,6 @@ import ec.research.gp.simple.util.Config;
 import ec.research.gp.simple.util.Context;
 import ec.research.gp.statistics.LayeredGPStatistics;
 
-
-
 /**
  * The layered GP, based on Hornby's ALPS, but extended to handle different
  * layer migration schemes.
@@ -1031,7 +1029,10 @@ public class LayeredGP extends GP {
 					problem.fitness(individual);
 
 					synchronized (lock) {
-						numEvaluations++;
+						if (!(foundOptimal && context.getConfig()
+								.stopOnOptimal())) {
+							numEvaluations++;
+						}
 
 						// See if the best individual of the generation is the
 						// best overall
