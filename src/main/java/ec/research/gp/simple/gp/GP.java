@@ -525,8 +525,9 @@ public class GP {
 		// Choose from terminal set if we've hit the max or if using the grow
 		// method
 		if (maxDepth == 0
-				|| (method == 0 && context.randDouble() < (terminalSet.size() / (terminalSet
-						.size() + functionSet.size())))) {
+				|| (method == 0 && context.randDouble() < ((double) terminalSet
+						.size() / (double) (terminalSet.size() + functionSet
+						.size())))) {
 
 			// Pick a random terminal.
 			int index = context.randBetween(0, terminalSet.size() - 1);
