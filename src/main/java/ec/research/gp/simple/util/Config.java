@@ -433,7 +433,14 @@ public class Config {
 		this.maxDepth = Integer.parseInt(params.getProperty("maxDepth", "17"));
 
 		// Set the max allowed size (number of nodes) for a tree
-		this.maxSize = Integer.parseInt(params.getProperty("maxSize", "300"));
+		String maxSizeParam = params.getProperty("maxSize");
+
+		// Default to no max size (i.e. Integer.MAX_VALUE).
+		if (maxSizeParam != null) {
+			this.maxSize = Integer.parseInt(maxSizeParam);
+		} else {
+			this.maxSize = Integer.MAX_VALUE;
+		}
 
 		// Set the min build depth
 		this.minBuildDepth = Integer.parseInt(params.getProperty(
