@@ -103,7 +103,7 @@ def plotConvergence(resultsDirs, outDir, labels):
 
 	plt.xticks(xTicks, labels)
 	plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-	plt.ylabel('Avg. Evaluations')
+	plt.ylabel('Mean Evaluations')
 	plt.savefig(os.path.join(outDir, "convergence.eps"), bbox_inches="tight")
 
 	#Return the collection of all ending evals
