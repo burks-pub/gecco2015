@@ -19,6 +19,11 @@ LEGEND_LOC=1 #bottom right
 font = {'size': '9'}
 matplotlib.rc('font', **font)
 
+#USE TYPE 1 FONTS!!
+matplotlib.rcParams['ps.useafm'] = True
+matplotlib.rcParams['pdf.use14corefonts'] = True
+matplotlib.rcParams['text.usetex'] = True
+
 #Convenience method to make sure the output directory exists
 def checkOutDir(outputDir):
 		if not os.path.exists(outputDir):
